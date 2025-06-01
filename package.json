@@ -4,7 +4,8 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start": "node server.js"
+    "start": "node server.js",
+      "build": "echo \"No build step\""
   },
   "keywords": [],
   "author": "Your Name or Organization",
