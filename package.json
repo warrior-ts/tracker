@@ -1,15 +1,16 @@
 {
   "name": "tracker",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Your Name or Organization",
   "license": "ISC",
-  "description": "",
+  "description": "A cybersecurity tracker application to monitor and analyze security events.",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^4.x.x"
   }
 }
