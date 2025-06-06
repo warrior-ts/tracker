@@ -1,6 +1,10 @@
 const express = require("express");
 const fs = require("fs");
+const morgan = require("morgan");
 const app = express();
+
+// HTTP request logger
+app.use(morgan("combined"));
 
 app.get("/track.png", (req, res) => {
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
@@ -11,7 +15,11 @@ app.get("/track.png", (req, res) => {
     userAgent
   };
 
+  // Log to file
   fs.appendFileSync("log.txt", JSON.stringify(logEntry) + "\n");
+
+  // Log to console
+  console.log("Tracking request:", logEntry);
 
   // Transparent 1x1 PNG
   const img = Buffer.from(

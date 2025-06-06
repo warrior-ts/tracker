@@ -5,13 +5,14 @@
   "scripts": {
     "test": "jest",
     "start": "node server.js",
-      "build": "echo \"No build step\""
+    "build": "echo \"No build step\""
   },
   "keywords": [],
   "author": "Your Name or Organization",
   "license": "ISC",
   "description": "A cybersecurity tracker application to monitor and analyze security events.",
   "dependencies": {
-    "express": "^4.x.x"
+    "express": "^4.x.x",
+    "morgan": "^1.10.0"
   }
 }
